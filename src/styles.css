@@ -1,5 +1,11 @@
+html,
 body {
-	background-color: #18122B;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #18122b;
 }
 
 .bio {
@@ -9,16 +15,16 @@ body {
 	width: 20em;
 	font-size: large;
 
-	animation:fade-in 0.5s ease-in-out;
+	animation: fade-in 0.5s ease-in-out;
 }
 
 @keyframes fade-in {
-  0% {
-    opacity:0
-  }
-  100% {
-    opacity:1;
-  }
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 h1 {
@@ -27,4 +33,18 @@ h1 {
 
 .title {
 	text-align: center;
+}
+
+.nav-bar {
+	color: white;
+	background-color: rebeccapurple;
+	display: flex;
+	justify-content: space-between;
+
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.nav-bar-element {
+	color: white;
 }

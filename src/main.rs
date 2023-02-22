@@ -31,9 +31,29 @@ fn switch(routes: Route) -> Html {
 #[function_component(App)]
 fn app() -> Html {
     html! {
-        <BrowserRouter>
-            <Switch<Route> render={switch} /> // <- must be child of <BrowserRouter>
-        </BrowserRouter>
+        <>
+            <BrowserRouter>
+                <NavBar />
+
+                <Switch<Route> render={switch} /> // <- must be child of <BrowserRouter>
+            </BrowserRouter>
+        </>
+    }
+}
+
+#[function_component(NavBar)]
+fn nav_bar() -> Html {
+    html! {
+        <>
+            <div class="nav-bar">
+                <Link<Route> to={Route::Home}>
+                    <p class="nav-bar-element">{ "Home" }</p>
+                </Link<Route>>
+                <Link<Route> to={Route::Projects}>
+                    <p class="nav-bar-element">{ "Projects" }</p>
+                </Link<Route>>
+            </div>
+        </>
     }
 }
 
@@ -41,16 +61,17 @@ fn app() -> Html {
 fn home() -> Html {
     html! {
         <>
-            <p class="bio">{ "Hi, I'm Steve!"} <br/>
-                {"I like making games in Godot and Minecraft mods."} <br/><br/>
-                {"Currently maintaining 3 MC mods (+more) https://github.com/Steveplays28"}
+            <p class="bio">
+                { "Hi, I'm Steve!" } <br/>
+                { "I like making games in Godot and Minecraft mods." } <br/><br/>
+                { "Currently maintaining 3 MC mods (+more) https://github.com/Steveplays28" }
             </p>
         </>
     }
 }
 
 #[function_component(Projects)]
-fn projects() -> Html {
+pub fn projects() -> Html {
     html! {
         <>
             <h1 class="title">{"Projects"}</h1>

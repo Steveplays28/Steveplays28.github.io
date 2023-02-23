@@ -8,6 +8,11 @@ body {
 	background-color: #18122b;
 }
 
+button {
+	display: block;
+	border: 0;
+}
+
 .bio {
 	color: deepskyblue;
 	margin-left: auto;
@@ -54,17 +59,16 @@ h1 {
 	top: 25vh;
 	width: 200px;
 	height: 120px;
-	display: block;
-	border: 0;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 1vh;
 	margin-bottom: 1vh;
-	background-color: blue;
+	background-color: #635985;
 	color: white;
 	transform: skew(-25deg);
 	animation: plop-in 0.75s ease-out, fade-in 0.5s ease-in-out;
 	animation-fill-mode: both;
+	border-radius: 5px;
 }
 
 .project:hover {

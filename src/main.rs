@@ -64,8 +64,9 @@ fn nav_bar() -> Html {
 
 #[function_component(Home)]
 fn home() -> Html {
-    let names: Vec<&str> = vec!["Project 1", "Project 2"];
-    let mut index = -1;
+    let names: Vec<&str> = vec!["Project 1", "Project 2", "Project 3", "Project 4", "Project 5", "Project 6", "Project 7", "Project 8", "Project 9"];
+    let mut index: f32 = -0.25;
+    let navigator = use_navigator().unwrap();
 
     html! {
         <>
@@ -75,16 +76,20 @@ fn home() -> Html {
                 { "Currently maintaining 3 MC mods (+more) https://github.com/Steveplays28" }
             </p>
 
+            <div class="projects">
             {
                 names.into_iter().map(|name| {
-                    index += 1;
+                    index += 0.25;
                     let animation_delay = format!("animation-delay: {}s", index);
+                    let navigator = navigator.clone();
+                    let onclick = Callback::from(move |_| navigator.push(&Route::Projects));
 
                     html! {
-                        <div key={name} class="project" style={animation_delay}>{ name }</div>
+                        <button {onclick} key={name} class="project" style={animation_delay}>{ name }</button>
                     }
                 }).collect::<Html>()
             }
+            </div>
         </>
     }
 }

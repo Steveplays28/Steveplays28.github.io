@@ -48,3 +48,28 @@ h1 {
 .nav-bar-element {
 	color: white;
 }
+
+.project {
+	position: relative;
+	top: 25vh;
+	width: 200px;
+	height: 120px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1vh;
+	margin-bottom: 1vh;
+	background-color: blue;
+	color: white;
+	transform: skew(-25deg);
+	animation: plop-in 1.5s ease-out, fade-in 1s ease-in-out;
+	animation-fill-mode: both;
+}
+
+@keyframes plop-in {
+	0% {
+		top: 5vh;
+	}
+	100% {
+		top: 25vh;
+	}
+}

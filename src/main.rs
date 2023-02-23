@@ -12,6 +12,10 @@ enum Route {
     NotFound,
 }
 
+pub struct ProjectsList {
+    names: Vec<String>,
+}
+
 fn main() {
     yew::Renderer::<App>::new().render();
 }
@@ -35,7 +39,8 @@ fn app() -> Html {
             <BrowserRouter>
                 <NavBar />
 
-                <Switch<Route> render={switch} /> // <- must be child of <BrowserRouter>
+                // Must be child of <BrowserRouter>
+                <Switch<Route> render={switch} />
             </BrowserRouter>
         </>
     }
@@ -59,6 +64,9 @@ fn nav_bar() -> Html {
 
 #[function_component(Home)]
 fn home() -> Html {
+    let names: Vec<&str> = vec!["Project 1", "Project 2"];
+    let mut index = -1;
+
     html! {
         <>
             <p class="bio">
@@ -66,6 +74,17 @@ fn home() -> Html {
                 { "I like making games in Godot and Minecraft mods." } <br/><br/>
                 { "Currently maintaining 3 MC mods (+more) https://github.com/Steveplays28" }
             </p>
+
+            {
+                names.into_iter().map(|name| {
+                    index += 1;
+                    let animation_delay = format!("animation-delay: {}s", index);
+
+                    html! {
+                        <div key={name} class="project" style={animation_delay}>{ name }</div>
+                    }
+                }).collect::<Html>()
+            }
         </>
     }
 }

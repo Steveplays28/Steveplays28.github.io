@@ -36,6 +36,10 @@ fn switch(routes: Route) -> Html {
 fn app() -> Html {
     html! {
         <>
+            <head>
+                <title>{ "Portfolio" }</title>
+            </head>
+
             <BrowserRouter>
                 <NavBar />
 
@@ -64,7 +68,17 @@ fn nav_bar() -> Html {
 
 #[function_component(Home)]
 fn home() -> Html {
-    let names: Vec<&str> = vec!["Project 1", "Project 2", "Project 3", "Project 4", "Project 5", "Project 6", "Project 7", "Project 8", "Project 9"];
+    let names: Vec<&str> = vec![
+        "Project 1",
+        "Project 2",
+        "Project 3",
+        "Project 4",
+        "Project 5",
+        "Project 6",
+        "Project 7",
+        "Project 8",
+        "Project 9",
+    ];
     let mut index: f32 = -0.25;
     let navigator = use_navigator().unwrap();
 

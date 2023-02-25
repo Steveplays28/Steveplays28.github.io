@@ -6,6 +6,8 @@ body {
 
 body {
 	background-color: #18122b;
+	height: 100vh;
+	perspective: 25em;
 }
 
 button {
@@ -59,13 +61,10 @@ h1 {
 	top: 25vh;
 	width: 200px;
 	height: 120px;
-	margin-left: auto;
-	margin-right: auto;
 	margin-top: 1vh;
 	margin-bottom: 1vh;
 	background-color: #635985;
 	color: white;
-	transform: skew(-25deg);
 	animation: plop-in 0.75s ease-out, fade-in 0.5s ease-in-out;
 	animation-fill-mode: both;
 	border-radius: 5px;
@@ -87,8 +86,12 @@ h1 {
 .projects {
 	display: flex;
 	align-content: flex-start;
+	justify-content: center;
 	flex-flow: row wrap;
-	gap: 100px;
+	column-gap: 1vw;
 	padding-right: 10vw;
 	padding-left: 10vw;
+	position: absolute;
+	top: 5vh;
+	z-index: -1;
 }

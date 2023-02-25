@@ -13,6 +13,7 @@ body {
 	);
 	height: 100vh;
 	perspective: 25em;
+	font-family: 'Rubik', sans-serif;
 }
 
 button {
@@ -80,10 +81,10 @@ h1 {
 .project {
 	position: relative;
 	width: 20vw;
-	height: 24vh;
+	height: 23.5vh;
 	margin-top: 1vh;
 	margin-bottom: 1vh;
-	background-color: transparent;
+	background-color: #443c68;
 	color: white;
 	animation: plop-in 0.75s ease-out, fade-in 0.5s ease-in-out;
 	animation-fill-mode: both;

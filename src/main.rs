@@ -80,6 +80,16 @@ fn home() -> Html {
             name: "Path Under Fence Gates",
             link: "https://modrinth.com/mod/pathunderfencegates",
             image: "https://github.com/Steveplays28/pathunderfencegates/raw/main/docs/media/all_fixes.png",
+        },
+        Project {
+            name: "Restart Server",
+            link: "https://modrinth.com/mod/restart-server",
+            image: "https://github.com/Steveplays28/restart-server/raw/main/command_preview.png",
+        },
+        Project {
+            name: "Forgero (contributor)",
+            link: "https://modrinth.com/mod/forgero",
+            image: "https://github.com/SigmundGranaas/forgero/raw/1.19/assets/Banner.png",
         }
     ];
     let mut index: f32 = -0.25;

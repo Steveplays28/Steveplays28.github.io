@@ -95,8 +95,8 @@ h1 {
 	align-content: center;
 	column-gap: 1vw;
 
-	padding-left: 10%;
-	padding-right: 10%;
+	padding-left: 5%;
+	padding-right: 5%;
 	backdrop-filter: grayscale(25%);
 }
 
@@ -158,8 +158,28 @@ h1 {
 	justify-content: center;
 	flex-flow: row wrap;
 	column-gap: 1vw;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 5%;
+	margin-right: 5%;
 	margin-top: 25vh;
 	z-index: -1;
+}
+
+.socials {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	column-gap: 1vw;
+
+	margin-left: auto;
+}
+
+.socials a {
+	width: 30%;
+	height: auto;
+}
+
+.socials a img {
+	width: 100%;
+	height: auto;
 }

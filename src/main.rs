@@ -67,6 +67,14 @@ fn nav_bar() -> Html {
                         <p>{ "Projects" }</p>
                     </Link<Route>>
                 </div>
+                <div class="nav-bar-element socials">
+                    <a href="https://github.com/Steveplays28/portfolio-website-rs" target="_blank" rel="noopener noreferrer">
+                        <img src="/media/github-mark-white.svg" />
+                    </a>
+                    <a href="https://discord.gg/KbWxgGg" target="_blank" rel="noopener noreferrer">
+                        <img src="/media/discord-mark-white.svg" />
+                    </a>
+                </div>
             </div>
         </>
     }

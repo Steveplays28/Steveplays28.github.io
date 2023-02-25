@@ -57,12 +57,16 @@ fn nav_bar() -> Html {
     html! {
         <>
             <div class="nav-bar">
-                <Link<Route> to={Route::Home}>
-                    <p class="nav-bar-element">{ "Home" }</p>
-                </Link<Route>>
-                <Link<Route> to={Route::Projects}>
-                    <p class="nav-bar-element">{ "Projects" }</p>
-                </Link<Route>>
+                <div class="nav-bar-element">
+                    <Link<Route> to={Route::Home}>
+                        <p>{ "Home" }</p>
+                    </Link<Route>>
+                </div>
+                <div class="nav-bar-element">
+                    <Link<Route> to={Route::Projects}>
+                        <p>{ "Projects" }</p>
+                    </Link<Route>>
+                </div>
             </div>
         </>
     }
@@ -98,7 +102,10 @@ fn home() -> Html {
     html! {
         <>
             <div class="bio-container">
-                <img src="/media/steve_profile_picture.png" alt="Profile picture" class="profile-picture" />
+                <a href="https://github.com/Steveplays28" target="_blank" rel="noopener noreferrer" class="profile-picture-container">
+                    <img src="/media/steve_profile_picture.png" alt="Profile picture" class="profile-picture" />
+                    <img src="/media/github-mark-white.svg" alt="GitHub out link" class="github" />
+                </a>
 
                 <p class="bio">
                     { "Hi, I'm Steve!" } <br/>

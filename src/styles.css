@@ -22,29 +22,51 @@ button {
 }
 
 .bio-container {
-	margin-left: 5vw;
-	margin-right: 5vw;
+	margin-left: 13.5vw;
+	margin-right: 13.5vw;
 	margin-top: 5vw;
 
 	display: flex;
 	align-content: center;
 	align-items: center;
 	justify-content: center;
-	column-gap: 5vw;
+	column-gap: 12vw;
 
 	animation: fade-in 0.5s ease-in-out;
 }
 
-.profile-picture {
+.profile-picture-container {
 	width: 10vw;
+	height: 10vw;
+	align-self: center;
+}
+
+.profile-picture {
+	width: inherit;
 	height: auto;
 	border-radius: 50%;
-	align-self: center;
+}
+
+.github {
+	position: relative;
+	bottom: 25%;
+	right: -75%;
+	width: 20%;
+	height: auto;
+
+	opacity: 0;
+	transition: opacity 0.15s ease-in-out;
+}
+
+.github:hover,
+.profile-picture:hover + .github {
+	opacity: 1;
+	transition: opacity 0.15s ease-in-out;
 }
 
 .bio {
 	color: white;
-	font-size: large;
+	font-size: 2rem;
 }
 
 @keyframes fade-in {
@@ -66,16 +88,33 @@ h1 {
 
 .nav-bar {
 	color: white;
-	background-color: rebeccapurple;
+	background-color: transparent;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	column-gap: 1vw;
 
 	padding-left: 10%;
 	padding-right: 10%;
+	backdrop-filter: grayscale(25%);
 }
 
 .nav-bar-element {
+	font-size: larger;
+}
+
+.nav-bar-element a {
 	color: white;
+	text-decoration: none;
+
+	transition: color 0.15s ease-in-out;
+}
+
+.nav-bar-element a:hover {
+	color: lightgray;
+
+	transition: color 0.15s ease-in-out;
 }
 
 .project {

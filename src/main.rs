@@ -12,8 +12,10 @@ enum Route {
     NotFound,
 }
 
-pub struct ProjectsList {
-    names: Vec<String>,
+pub struct Project<'a, 'b, 'c> {
+    name: &'a str,
+    link: &'b str,
+    image: &'c str,
 }
 
 fn main() {
@@ -68,38 +70,43 @@ fn nav_bar() -> Html {
 
 #[function_component(Home)]
 fn home() -> Html {
-    let names: Vec<&str> = vec![
-        "Project 1",
-        "Project 2",
-        "Project 3",
-        "Project 4",
-        "Project 5",
-        "Project 6",
-        "Project 7",
-        "Project 8",
-        "Project 9",
+    let projects: Vec<Project> = vec![
+        Project {
+            name: "Realistic Sleep",
+            link: "https://modrinth.com/mod/realisticsleep",
+            image: "https://github.com/Steveplays28/realisticsleep/raw/main/docs/media/realistic_sleep.gif",
+        },
+        Project {
+            name: "Path Under Fence Gates",
+            link: "https://modrinth.com/mod/pathunderfencegates",
+            image: "https://github.com/Steveplays28/pathunderfencegates/raw/main/docs/media/all_fixes.png",
+        }
     ];
     let mut index: f32 = -0.25;
     let navigator = use_navigator().unwrap();
 
     html! {
         <>
-            <p class="bio">
-                { "Hi, I'm Steve!" } <br/>
-                { "I like making games in Godot and Minecraft mods." } <br/><br/>
-                { "Currently maintaining 3 MC mods (+more) https://github.com/Steveplays28" }
-            </p>
+            <div class="bio-container">
+                <img src="/media/steve_profile_picture.png" alt="Profile picture" class="profile-picture" />
+
+                <p class="bio">
+                    { "Hi, I'm Steve!" } <br/>
+                    { "I like making games in Godot and Minecraft mods." } <br/><br/>
+                    { "Currently maintaining 3 MC mods (+more) https://github.com/Steveplays28" }
+                </p>
+            </div>
 
             <div class="projects">
             {
-                names.into_iter().map(|name| {
+                projects.into_iter().map(|project| {
                     index += 0.25;
-                    let animation_delay = format!("animation-delay: {}s", index);
+                    let style = format!("animation-delay: {seconds}s; background-image: url({image});", seconds = index, image = project.image);
                     let navigator = navigator.clone();
                     let onclick = Callback::from(move |_| navigator.push(&Route::Projects));
 
                     html! {
-                        <button {onclick} key={name} class="project" style={animation_delay}>{ name }</button>
+                        <button {onclick} key={project.name} class="project" style={style}>{ project.name } <br /> { project.link }</button>
                     }
                 }).collect::<Html>()
             }

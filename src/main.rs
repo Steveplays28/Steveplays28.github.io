@@ -117,8 +117,8 @@ fn home() -> Html {
 
                 <p class="bio">
                     { "Hi, I'm Steve!" } <br/>
-                    { "I like making games in Godot and Minecraft mods." } <br/><br/>
-                    { "Currently maintaining 3 MC mods (+more) https://github.com/Steveplays28" }
+                    { "I like making games in Godot, as well as making Minecraft mods." } <br/><br/>
+                    { "I'm currently maintaining 3 Minecraft mods, and contributing to another Minecraft mod called Forgero." }
                 </p>
             </div>
 

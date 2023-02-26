@@ -38,7 +38,7 @@ button {
 .bio-container {
 	margin-left: 13.5vw;
 	margin-right: 13.5vw;
-	margin-top: 5vw;
+	margin-top: 12vh;
 
 	display: flex;
 	align-content: center;
@@ -53,6 +53,7 @@ button {
 	width: 10vw;
 	height: 10vw;
 	align-self: center;
+	transition: width 0.5s ease-in-out, width 0.5s ease-in-out;
 }
 
 .profile-picture {
@@ -63,7 +64,8 @@ button {
 	transition: border 0.15s ease-in-out;
 }
 
-.profile-picture:hover, .profile-picture-container:hover .profile-picture:not(:hover) {
+.profile-picture:hover,
+.profile-picture-container:hover .profile-picture:not(:hover) {
 	border: 5px solid white;
 	transition: border 0.15s ease-in-out;
 }
@@ -87,7 +89,8 @@ button {
 
 .bio {
 	color: white;
-	font-size: 2rem;
+	font-size: 1.5vw;
+	transition: font-size 0.5s ease-in-out;
 }
 
 @keyframes fade-in {
@@ -119,6 +122,7 @@ h1 {
 	padding-left: 5%;
 	padding-right: 5%;
 	backdrop-filter: grayscale(25%);
+	transition: column-gap 0.5s ease-in-out;
 }
 
 .nav-bar-element {
@@ -154,7 +158,8 @@ h1 {
 	background-position: center center;
 	background-size: contain;
 
-	transition: filter 0.15s ease-in-out, transform 0.15s ease-in-out;
+	transition: filter 0.15s ease-in-out, transform 0.15s ease-in-out,
+		width 0.5s ease-in-out, width 0.5s ease-in-out;
 }
 
 .project:hover {
@@ -181,7 +186,7 @@ h1 {
 	column-gap: 1vw;
 	margin-left: 5%;
 	margin-right: 5%;
-	margin-top: 25vh;
+	margin-top: 12vh;
 	z-index: -1;
 }
 
@@ -191,8 +196,9 @@ h1 {
 	align-content: center;
 	justify-content: center;
 	column-gap: 1vw;
-
 	margin-left: auto;
+
+	transition: column-gap 0.5s ease-in-out;
 }
 
 .socials a {
@@ -212,4 +218,54 @@ h1 {
 .socials a img {
 	width: 100%;
 	height: auto;
+}
+
+@media only screen and (max-width: 800px) {
+	.nav-bar,
+	.socials {
+		column-gap: 3vw;
+		transition: column-gap 0.5s ease-in-out;
+	}
+
+	.bio {
+		font-size: 3vw;
+		transition: font-size 0.5s ease-in-out;
+	}
+
+	.profile-picture-container {
+		width: 20vw;
+		height: 20vw;
+		transition: width 0.5s ease-in-out, width 0.5s ease-in-out;
+	}
+}
+
+@media only screen and (max-width: 1200px) and (min-height: 1600px) {
+	.nav-bar,
+	.socials {
+		column-gap: 3vw;
+		font-size: 3vw;
+		transition: column-gap 0.5s ease-in-out;
+	}
+
+	.socials a {
+		width: 50%;
+		transition: width 0.5s ease-in-out;
+	}
+
+	.bio {
+		font-size: 3vw;
+		transition: font-size 0.5s ease-in-out;
+	}
+
+	.profile-picture-container {
+		width: 20vw;
+		height: 20vw;
+		transition: width 0.5s ease-in-out, width 0.5s ease-in-out;
+	}
+
+	.project {
+		width: 80vw;
+		height: 20vh;
+		transition: width 0.5s ease-in-out, width 0.5s ease-in-out;
+	}
 }

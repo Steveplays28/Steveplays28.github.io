@@ -5,7 +5,6 @@ body {
 }
 
 body {
-	background: rgb(24, 18, 43);
 	background: linear-gradient(
 		125deg,
 		rgba(24, 18, 43, 1) 0%,
@@ -14,6 +13,21 @@ body {
 	height: 100vh;
 	perspective: 25em;
 	font-family: 'Rubik', sans-serif;
+	background-size: 200% 200%;
+
+	animation: background-movement 60s ease infinite;
+}
+
+@keyframes background-movement {
+	0% {
+		background-position: 0% 83%;
+	}
+	50% {
+		background-position: 100% 18%;
+	}
+	100% {
+		background-position: 0% 83%;
+	}
 }
 
 button {
@@ -45,6 +59,13 @@ button {
 	width: inherit;
 	height: auto;
 	border-radius: 50%;
+	border: 5px solid transparent;
+	transition: border 0.15s ease-in-out;
+}
+
+.profile-picture:hover, .profile-picture-container:hover .profile-picture:not(:hover) {
+	border: 5px solid white;
+	transition: border 0.15s ease-in-out;
 }
 
 .github {
@@ -177,6 +198,15 @@ h1 {
 .socials a {
 	width: 30%;
 	height: auto;
+	transition: transform 0.25s ease-out;
+}
+
+.socials a:hover {
+	/* Color: #696969 converted to a filter via https://codepen.io/sosuke/pen/Pjoqqp */
+	filter: invert(43%) sepia(0%) saturate(12%) hue-rotate(226deg)
+		brightness(93%) contrast(85%);
+	transform: rotateZ(360deg);
+	transition: transform 0.25s ease-out, filter 0.25s ease-in-out;
 }
 
 .socials a img {

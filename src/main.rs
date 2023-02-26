@@ -112,7 +112,7 @@ fn home() -> Html {
             <div class="bio-container">
                 <a href="https://github.com/Steveplays28" target="_blank" rel="noopener noreferrer" class="profile-picture-container">
                     <img src="/media/steve_profile_picture.png" alt="Profile picture" class="profile-picture" />
-                    <img src="/media/github-mark-white.svg" alt="GitHub out link" class="github" />
+                    <img src="/media/github-mark-white-background.svg" alt="GitHub out link" class="github" />
                 </a>
 
                 <p class="bio">

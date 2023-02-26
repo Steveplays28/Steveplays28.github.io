@@ -197,7 +197,7 @@ h1 {
 	justify-content: center;
 	column-gap: 1vw;
 	margin-left: auto;
-	width: 6.5vw;
+	width: 7.5vw;
 
 	transition: column-gap 0.5s ease-in-out, width 0.5s ease-in-out;
 }

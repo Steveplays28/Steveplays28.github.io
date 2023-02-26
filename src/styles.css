@@ -199,7 +199,7 @@ h1 {
 	margin-left: auto;
 	width: 7.5vw;
 
-	transition: column-gap 0.5s ease-in-out;
+	transition: column-gap 0.5s ease-in-out, width 0.5s ease-in-out;
 }
 
 .socials a {
@@ -246,6 +246,11 @@ h1 {
 		column-gap: 3vw;
 		font-size: 3vw;
 		transition: column-gap 0.5s ease-in-out;
+	}
+
+	.socials {
+		width: 20vw;
+		transition: width 0.5s ease-in-out;
 	}
 
 	.socials a {

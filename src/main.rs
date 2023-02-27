@@ -5,11 +5,13 @@ use yew_router::prelude::*;
 enum Route {
     #[at("/")]
     Home,
-    #[at("/projects")]
-    Projects,
     #[not_found]
     #[at("/404")]
     NotFound,
+    #[at("/projects")]
+    Projects,
+    #[at("/contact")]
+    Contact,
 }
 
 pub struct Project<'a, 'b, 'c> {
@@ -17,6 +19,8 @@ pub struct Project<'a, 'b, 'c> {
     link: &'b str,
     image: &'c str,
 }
+
+static CURRENT_PAGE: Route = Route::Home;
 
 fn main() {
     yew::Renderer::<App>::new().render();
@@ -27,10 +31,13 @@ fn switch(routes: Route) -> Html {
         Route::Home => html! {
             <Home />
         },
+        Route::NotFound => html! { <h1>{ "404" }</h1> },
         Route::Projects => html! {
             <Projects />
         },
-        Route::NotFound => html! { <h1>{ "404" }</h1> },
+        Route::Contact => html! {
+            <Contact />
+        },
     }
 }
 
@@ -63,10 +70,11 @@ fn nav_bar() -> Html {
                     </Link<Route>>
                 </div>
                 <div class="nav-bar-element">
-                    <Link<Route> to={Route::Projects}>
-                        <p>{ "Projects" }</p>
+                    <Link<Route> to={Route::Contact}>
+                        <p>{ "Contact" }</p>
                     </Link<Route>>
                 </div>
+
                 <div class="nav-bar-element socials">
                     <a href="https://github.com/Steveplays28/portfolio-website-rs" target="_blank" rel="noopener noreferrer">
                         <img src="/media/github-mark-white.svg" />
@@ -148,6 +156,60 @@ pub fn projects() -> Html {
     html! {
         <>
             <h1 class="title">{"Projects"}</h1>
+        </>
+    }
+}
+
+#[function_component(Contact)]
+pub fn contact() -> Html {
+    html! {
+        <>
+            <div class="contact-text">
+                <p class="title">{ "Reach out to me" }</p> <br/>
+                <p class="subtitle">{ "I respond most quickly on Discord, GitHub and Patreon, but I try my best to respond on all platforms." }</p>
+            </div>
+
+            <div class="socials contact-socials">
+                <a href="https://github.com/Steveplays28/portfolio-website-rs" target="_blank" rel="noopener noreferrer">
+                    <img src="/media/github-mark-white.svg" />
+                </a>
+                <a href="https://discord.gg/KbWxgGg" target="_blank" rel="noopener noreferrer">
+                    <img src="/media/discord-mark-white.svg" />
+                </a>
+                <a href="https://www.patreon.com/steveplays28" target="_blank" rel="noopener noreferrer">
+                    <img src="/media/Digital-Patreon-Logo_White.png" />
+                </a>
+                <a href="https://rvlt.gg/gYXfebk5" target="_blank" rel="noopener noreferrer">
+                    <img src="/media/revolt_chat_logo_white.png" />
+                </a>
+                <a href="https://ko-fi.com/steveplays" target="_blank" rel="noopener noreferrer">
+                    <img src="/media/kofi_s_logo_nolabel.svg" />
+                </a>
+                <a href="https://www.youtube.com/steveplays28" target="_blank" rel="noopener noreferrer">
+                    <img src="/media/yt_icon_mono_dark.png" />
+                </a>
+                <a href="https://gitlab.com/steveplays" target="_blank" rel="noopener noreferrer">
+                    <img src="/media/gitlab-logo-700.svg" />
+                </a>
+                <a href="https://steveplays.itch.io" target="_blank" rel="noopener noreferrer">
+                    <img src="/media/itchio-logo-textless-white.svg" />
+                </a>
+                <a href="https://mastodon.gamedev.place/@steveplays" target="_blank" rel="noopener noreferrer">
+                    <img src="/media/mastodon-logo-white.svg" />
+                </a>
+                <a href="https://twitter.com/steveplays28" target="_blank" rel="noopener noreferrer">
+                    <img src="/media/twitter-logo-white.svg" />
+                </a>
+                <a href="https://modrinth.com/user/Steveplays" target="_blank" rel="noopener noreferrer">
+                    <img src="/media/modrinth-logo-white.svg" />
+                </a>
+                <a href="https://www.curseforge.com/members/steveplays28" target="_blank" rel="noopener noreferrer">
+                    <img src="/media/curseforge-logo-white.svg" />
+                </a>
+                <a href="https://twitch.tv/steveplays28" target="_blank" rel="noopener noreferrer">
+                    <img src="/media/TwitchGlitchWhite.svg" />
+                </a>
+            </div>
         </>
     }
 }

@@ -102,12 +102,8 @@ button {
 	}
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6, p {
 	color: white;
-}
-
-.title {
-	text-align: center;
 }
 
 .nav-bar {
@@ -219,6 +215,28 @@ h1 {
 .socials a img {
 	width: 100%;
 	height: auto;
+}
+
+.contact-text {
+	text-align: center;
+	margin-top: 12vh;
+}
+
+.title {
+	font-size: 4vw;
+}
+
+.subtitle {
+	font-size: 1vw;
+	font-weight: lighter;
+	margin-top: -9vh;
+	margin-bottom: 9vh;
+}
+
+.contact-socials {
+	margin-left: auto;
+	margin-right: auto;
+	width: 40vw;
 }
 
 @media only screen and (max-width: 800px) {

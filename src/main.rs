@@ -20,8 +20,6 @@ pub struct Project<'a, 'b, 'c> {
     image: &'c str,
 }
 
-static CURRENT_PAGE: Route = Route::Home;
-
 fn main() {
     yew::Renderer::<App>::new().render();
 }

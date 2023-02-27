@@ -102,7 +102,13 @@ button {
 	}
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
 	color: white;
 }
 
@@ -224,19 +230,28 @@ h1, h2, h3, h4, h5, h6, p {
 
 .title {
 	font-size: 4vw;
+	transition: font-size 0.5s ease-in-out;
 }
 
 .subtitle {
 	font-size: 1vw;
 	font-weight: lighter;
-	margin-top: -9vh;
-	margin-bottom: 9vh;
+	margin-top: -4%;
+	margin-bottom: 4%;
+	margin-left: 5vw;
+	margin-right: 5vw;
+	transition: font-size 0.5s ease-in-out;
 }
 
 .contact-socials {
 	margin-left: auto;
 	margin-right: auto;
-	width: 40vw;
+	width: 45vw;
+	transition: width 0.5s ease-in-out;
+}
+
+.gap {
+	width: 3vw;
 }
 
 @media only screen and (max-width: 800px) {
@@ -259,7 +274,22 @@ h1, h2, h3, h4, h5, h6, p {
 	.profile-picture-container {
 		width: 20vw;
 		height: 20vw;
-		transition: width 0.5s ease-in-out, width 0.5s ease-in-out;
+		transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+	}
+
+	.title {
+		font-size: 8vw;
+		transition: font-size 0.5s ease-in-out;
+	}
+
+	.subtitle {
+		font-size: 4vw;
+		transition: font-size 0.5s ease-in-out;
+	}
+
+	.contact-socials {
+		width: 90vw;
+		transition: width 0.5s ease-in-out;
 	}
 }
 
@@ -296,5 +326,20 @@ h1, h2, h3, h4, h5, h6, p {
 		width: 80vw;
 		height: 20vh;
 		transition: width 0.5s ease-in-out, width 0.5s ease-in-out;
+	}
+
+	.title {
+		font-size: 8vw;
+		transition: font-size 0.5s ease-in-out;
+	}
+
+	.subtitle {
+		font-size: 4vw;
+		transition: font-size 0.5s ease-in-out;
+	}
+
+	.contact-socials {
+		width: 90vw;
+		transition: width 0.5s ease-in-out;
 	}
 }

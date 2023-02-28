@@ -43,10 +43,6 @@ fn switch(routes: Route) -> Html {
 fn app() -> Html {
     html! {
         <>
-            <head>
-                <title>{ "Portfolio" }</title>
-            </head>
-
             <BrowserRouter>
                 <NavBar />
 

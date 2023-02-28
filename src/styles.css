@@ -159,6 +159,7 @@ p {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: contain;
+	text-decoration: none;
 
 	transition: filter 0.15s ease-in-out, transform 0.15s ease-in-out,
 		width 0.5s ease-in-out, width 0.5s ease-in-out;
@@ -169,6 +170,14 @@ p {
 	transform: translateY(-2vh);
 
 	transition: filter 0.15s ease-in-out, transform 0.15s ease-in-out;
+}
+
+.project-title {
+	font-size: 1vw;
+	margin-top: 60%;
+	width: max-content;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 @keyframes plop-in {

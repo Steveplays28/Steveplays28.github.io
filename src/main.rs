@@ -114,7 +114,6 @@ fn home() -> Html {
         }
     ];
     let mut index: f32 = -0.25;
-    let navigator = use_navigator().unwrap();
 
     html! {
         <>
@@ -136,11 +135,11 @@ fn home() -> Html {
                 projects.into_iter().map(|project| {
                     index += 0.25;
                     let style = format!("animation-delay: {seconds}s; background-image: url({image});", seconds = index, image = project.image);
-                    let navigator = navigator.clone();
-                    let onclick = Callback::from(move |_| navigator.push(&Route::Projects));
 
                     html! {
-                        <button {onclick} key={project.name} class="project" style={style}>{ project.name } <br /> { project.link }</button>
+                        <a href={project.link} target="_blank" rel="noopener noreferrer" key={project.name} class="project" style={style}>
+                            <p class="project-title">{ project.name }</p>
+                        </a>
                     }
                 }).collect::<Html>()
             }

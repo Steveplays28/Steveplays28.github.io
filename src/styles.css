@@ -174,10 +174,11 @@ p {
 
 .project-title {
 	font-size: 1vw;
-	margin-top: 60%;
+	margin-top: 25vh;
 	width: max-content;
 	margin-left: auto;
 	margin-right: auto;
+	transition: font-size 0.5s ease-in-out, margin-top 0.5s ease-in-out;
 }
 
 @keyframes plop-in {
@@ -300,6 +301,11 @@ p {
 		width: 90vw;
 		transition: width 0.5s ease-in-out;
 	}
+
+	.project-title {
+		font-size: 2vw;
+		transition: font-size 0.5s ease-in-out, margin-top 0.5s ease-in-out;
+	}
 }
 
 @media only screen and (max-width: 1200px) and (min-height: 1600px) {
@@ -331,10 +337,21 @@ p {
 		transition: width 0.5s ease-in-out, width 0.5s ease-in-out;
 	}
 
+	.projects {
+		row-gap: 10vw;
+	}
+
 	.project {
 		width: 80vw;
 		height: 20vh;
-		transition: width 0.5s ease-in-out, width 0.5s ease-in-out;
+		transition: width 0.5s ease-in-out, width 0.5s ease-in-out,
+			filter 0.15s ease-in-out, transform 0.15s ease-in-out;
+	}
+
+	.project-title {
+		font-size: 4vw;
+		margin-top: 21vh;
+		transition: font-size 0.5s ease-in-out, margin-top 0.5s ease-in-out;
 	}
 
 	.title {

@@ -91,22 +91,22 @@ fn home() -> Html {
         Project {
             name: "Realistic Sleep",
             link: "https://modrinth.com/mod/realisticsleep",
-            image: "https://github.com/Steveplays28/realisticsleep/blob/3420dc9ec26bdbdf3044f066744db67a605fb8f1/docs/media/realistic_sleep.gif",
+            image: "https://github.com/Steveplays28/realisticsleep/raw/3420dc9ec26bdbdf3044f066744db67a605fb8f1/docs/media/realistic_sleep.gif",
         },
         Project {
             name: "Path Under Fence Gates",
             link: "https://modrinth.com/mod/pathunderfencegates",
-            image: "https://github.com/Steveplays28/pathunderfencegates/blob/4c2c9c086a9d85f47e369fd2ef8f958e2b37650d/docs/media/all_fixes.png",
+            image: "https://github.com/Steveplays28/pathunderfencegates/raw/4c2c9c086a9d85f47e369fd2ef8f958e2b37650d/docs/media/all_fixes.png",
         },
         Project {
             name: "Restart Server",
             link: "https://modrinth.com/mod/restart-server",
-            image: "https://github.com/Steveplays28/restart-server/blob/67bc815074a98eef71f3a49ceb8ea29206f095d1/docs/media/command_preview.png",
+            image: "https://github.com/Steveplays28/restart-server/raw/67bc815074a98eef71f3a49ceb8ea29206f095d1/docs/media/command_preview.png",
         },
         Project {
             name: "Forgero (contributor)",
             link: "https://modrinth.com/mod/forgero",
-            image: "https://github.com/SigmundGranaas/forgero/blob/6cece12e6a9f59109470bc375c136da3e1cc3698/assets/banner.png",
+            image: "https://github.com/SigmundGranaas/forgero/raw/6cece12e6a9f59109470bc375c136da3e1cc3698/assets/banner.png",
         }
     ];
     let mut index: f32 = -0.25;

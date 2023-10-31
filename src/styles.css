@@ -35,6 +35,11 @@ button {
 	border: 0;
 }
 
+a {
+	text-decoration: none;
+	color: #c57df8;
+}
+
 .bio-container {
 	margin-left: 13.5vw;
 	margin-right: 13.5vw;
@@ -47,6 +52,10 @@ button {
 	column-gap: 12vw;
 
 	animation: fade-in 0.5s ease-in-out;
+}
+
+.bio-container a {
+	color: white;
 }
 
 .profile-picture-container {

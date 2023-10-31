@@ -76,8 +76,14 @@ fn nav_bar() -> Html {
                     <a href="https://discord.gg/KbWxgGg" target="_blank" rel="noopener noreferrer">
                         <img src="/media/discord-mark-white.svg" />
                     </a>
+                    <a href="https://www.youtube.com/steveplays28" target="_blank" rel="noopener noreferrer">
+                        <img src="/media/yt_icon_mono_dark.png" />
+                    </a>
                     <a href="https://www.patreon.com/steveplays28" target="_blank" rel="noopener noreferrer">
                         <img src="/media/Digital-Patreon-Logo_White.png" />
+                    </a>
+                    <a href="https://ko-fi.com/steveplays" target="_blank" rel="noopener noreferrer">
+                        <img src="/media/kofi_s_logo_nolabel.svg" />
                     </a>
                 </div>
             </div>

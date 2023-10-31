@@ -209,7 +209,8 @@ p {
 	justify-content: center;
 	column-gap: 1vw;
 	margin-left: auto;
-	width: 7.5vw;
+	/* Increase the width to increase the space each social element gets, to avoid them becoming too small */
+	width: 13vw;
 
 	transition: column-gap 0.5s ease-in-out, width 0.5s ease-in-out;
 }

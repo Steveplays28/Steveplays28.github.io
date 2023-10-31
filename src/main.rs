@@ -140,6 +140,7 @@ fn home() -> Html {
             image: "https://wsrv.nl/?url=https%3A%2F%2Fmedia.forgecdn.net%2Fattachments%2F431%2F564%2Fcliff-side-2.png&n=-1",
         }
     ];
+    let initial_project_animation_delay_seconds: f32 = 0.25;
 
     let mut index: i32 = 0;
 
@@ -161,8 +162,8 @@ fn home() -> Html {
             <div class="projects">
             {
                 projects.into_iter().map(|project| {
+                    let style = format!("animation-delay: {seconds}s; background-image: url({image});", seconds = (index as f32) / 4.0 + initial_project_animation_delay_seconds, image = project.image);
                     index += 1;
-                    let style = format!("animation-delay: {seconds}s; background-image: url({image});", seconds = (index as f32) / 4.0, image = project.image);
 
                     html! {
                         <a href={project.link} target="_blank" rel="noopener noreferrer" key={project.name} class="project" style={style}>

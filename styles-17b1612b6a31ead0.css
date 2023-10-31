@@ -2,6 +2,9 @@ html,
 body {
 	margin: 0;
 	padding: 0;
+	/* Scrollbar */
+	scrollbar-color: #c57df8 #1e192e;
+	scrollbar-width: thin;
 }
 
 body {

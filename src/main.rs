@@ -121,7 +121,7 @@ fn home() -> Html {
         },
         Project {
             name: "FICSIT.chat",
-            link: "https://modrinth.com/mod/biome-fog",
+            link: "https://ficsit.app/mod/FicsitChat",
             image: "https://github.com/Steveplays28/FicsitChat/raw/bc7439443f313c6cc5fbc5c74706bbe79c5a6957/assets/ficsit_chat_icon_512x512.png",
         },
         Project {

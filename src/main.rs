@@ -204,7 +204,7 @@ pub fn contact() -> Html {
                 </a>
                 <div class="gap"></div>
 
-                <a href="https://github.com/Steveplays28/portfolio-website-rs" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/Steveplays28" target="_blank" rel="noopener noreferrer">
                     <img src="/media/github-mark-white.svg" />
                 </a>
                 <a href="https://gitlab.com/steveplays" target="_blank" rel="noopener noreferrer">

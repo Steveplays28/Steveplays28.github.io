@@ -120,6 +120,11 @@ fn home() -> Html {
             image: "https://github.com/Steveplays28/noisium/raw/516028d5a32874054859792473602ae8b189edeb/assets/banner/banner_without_author_text_1920x1080.png",
         },
         Project {
+            name: "Blendium",
+            link: "https://modrinth.com/mod/blendium",
+            image: "https://github.com/Steveplays28/blendium/raw/21f987c7a59369952fe172850d20f3f20b073b00/assets/gallery/blendium_1.png",
+        },
+        Project {
             name: "FICSIT.chat",
             link: "https://ficsit.app/mod/FicsitChat",
             image: "https://github.com/Steveplays28/FicsitChat/raw/bc7439443f313c6cc5fbc5c74706bbe79c5a6957/assets/ficsit_chat_icon_512x512.png",
@@ -155,7 +160,7 @@ fn home() -> Html {
                 <p class="bio">
                     { "Hi, I'm Steve!" } <br/>
                     { "I like making games in Godot, as well as making Minecraft mods." } <br/><br/>
-                    { "I'm currently maintaining 5 Minecraft mods, a Factorio mod, and a Satisfactory mod. I'm also contributing to other Minecraft projects, such as " } <a href="https://modrinth.com/mod/forgero" target="_blank" rel="noopener noreferrer"> { "Forgero" } </a> { " and "} <a href="https://modrinth.com/mod/distanthorizons" target="_blank" rel="noopener noreferrer"> { "Distant Horizons" } </a> { "." }
+                    { "I'm currently maintaining 6 Minecraft mods, a Factorio mod, and a Satisfactory mod. I'm also contributing to other Minecraft projects, such as " } <a href="https://modrinth.com/mod/forgero" target="_blank" rel="noopener noreferrer"> { "Forgero" } </a> { " and "} <a href="https://modrinth.com/mod/distanthorizons" target="_blank" rel="noopener noreferrer"> { "Distant Horizons" } </a> { "." }
                 </p>
             </div>
 
